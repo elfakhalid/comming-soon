@@ -1,0 +1,15 @@
+{
+  "name": "tradar",
+  "version": "1.0.0",
+  "description": "comming soon page ",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass scss:assets/css",
+    "watch": "sass --watch scss:assets/css"
+  },
+  "author": "khalid elfatouaki",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}

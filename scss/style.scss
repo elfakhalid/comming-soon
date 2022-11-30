@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+ul {
+  list-style: none;
+}
+body {
+  height: 100vh;
+  background-image: url("../images/bg_intro.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  width: 100%;
+  background-color: #b5b5b5;
+  position: relative;
+  z-index: 10;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  .menu {
+    ul {
+      display: flex;
+      font-size: 1.2vw;
+      text-transform: uppercase;
+      gap: 0 20px;
+      @media (min-width: "1536px") {
+        font-size: 19px;
+      }
+      li:first-of-type {
+        span:nth-of-type(2) {
+          visibility: hidden;
+        }
+      }
+      li {
+        display: flex;
+        color: #fff;
+        gap: 0 10px;
+      }
+    }
+  }
+  .login {
+    display: flex;
+    color: #fff;
+    height: 100%;
+    background: linear-gradient(90deg, #f7ae28 -9.83%, #f8d061 104%);
+    display: flex;
+    justify-items: center;
+    padding: 10px;
+    gap: 0 8px;
+    font-size: 20px;
+    align-items: center;
+    span:nth-of-type(2) {
+      margin-top: -6px;
+    }
+  }
+}
+
+.comming-soon {
+  display: flex;
+  height: calc(100% - 120px);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  h1 {
+    color: #fff;
+    font-size: 8em;
+    position: absolute;
+  }
+  h1:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #14a183;
+  }
+
+  h1:nth-child(2) {
+    color: #14a183;
+    animation: animate 4s ease-in-out infinite;
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
